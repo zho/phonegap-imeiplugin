@@ -15,5 +15,4 @@ Example Usage:
         console.log("My Android IMEI :" + imei);
     }
 
-Android: Worked
-IOS: Not yet!
+Android: Worked, IOS: Not yet!
