@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.joandilee.imeiplugin"
+        version="0.1">
+
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+
+    <name>IMEI Plugin</name>
+    <description>Get The Real IMEI Number on Device</description>
+    <author>Joandi</author>
+    <license>Apache 2.0</license>
+    <keywords>cordova,imei</keywords>
+    <repo>https://github.com/zho/phonegap-imeiplugin.git</repo>
+    <issue>https://github.com/zho/phonegap-imeiplugin/issues</issue>
+
+    <js-module src="www/imeiplugin.js" name="imeiplugin">
+        <clobbers target="imeiplugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="imeiplugin" >
+                <param name="android-package" value="com.joandilee.imeiplugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        </config-file>
+
+        <source-file src="src/android/imeiplugin.java" target-dir="src/com/joandilee/imeiplugin" />
+    </platform>
+</plugin>
