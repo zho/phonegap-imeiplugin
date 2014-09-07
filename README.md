@@ -1,7 +1,7 @@
 phonegap-imeiplugin
 ===================
 
-Get The Real IMEI Number on Device
+Get The Real IMEI Number on Android Device
 
 Install:
 
