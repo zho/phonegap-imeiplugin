@@ -15,7 +15,6 @@ public class imeiplugin extends CordovaPlugin {
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getImei")) {
-            //this.getImei("PERCOBAAN SUKSES!!", callbackContext);
             this.DeviceImeiNumber(callbackContext);
             return true;
         }
@@ -25,8 +24,7 @@ public class imeiplugin extends CordovaPlugin {
     public void DeviceImeiNumber(CallbackContext callbackContext) {
         Context context=this.cordova.getActivity().getApplicationContext();
 
-        TelephonyManager tManager = (TelephonyManager)cordova.getActivity().getSystemService(context.TELEPHONY_SERVICE);            
-        // return tManager.getDeviceId();
+        TelephonyManager tManager = (TelephonyManager)cordova.getActivity().getSystemService(context.TELEPHONY_SERVICE);
         callbackContext.success(tManager.getDeviceId());
     }
 
