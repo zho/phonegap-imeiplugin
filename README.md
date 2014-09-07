@@ -14,5 +14,3 @@ Example Usage:
     function callback(imei) {
         console.log("My Android IMEI :" + imei);
     }
-
-Android: Worked, IOS: Not yet!
