@@ -6,6 +6,8 @@ Get The Real IMEI Number on Android Device
 Install:
 
     phonegap plugin add https://github.com/zho/phonegap-imeiplugin.git
+    -- OR --
+    cordova plugin add imeiplugin
 
 Example Usage:
 
