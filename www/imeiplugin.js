@@ -1,6 +1,8 @@
 function IMEIPlugin() {
-	this.getImei = function(returnCallback) {
-		cordova.exec(returnCallback, function(){}, "imeiplugin", "getImei", []);
+	this.getImei = function(returnCallback,errCallback) {
+		if (Object.prototype.toString.call(errCallback) != '[object Function]')
+				errCallback = function(){};
+		cordova.exec(returnCallback, errCallback, "imeiplugin", "getImei", []);
 	}
 }
 
